@@ -97,3 +97,6 @@ ENV/
 *.pyc
 db.sqlite3
 media
+
+### POSTGRES ###
+d1scl3ao37o6gs

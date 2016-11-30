@@ -23,9 +23,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '+1#orv0%@n=9&*k1ve)k*&p!qiy3gyr=5b306u-ww7&j&og(^0'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['127.0.0.1', 'ontologica.herokuapp.com']
 
 
 # Application definition
@@ -76,7 +76,11 @@ WSGI_APPLICATION = 'OntoLogica.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'NAME': 'd1scl3ao37o6gs',
+        'HOST': 'ec2-54-163-230-103.compute-1.amazonaws.com',
+        'USER': 'pzgvrxqxqxkkux',
+        'PASSWORD': 'wPtHmhnxlTMElFhgEdWNo8Ic9w',
+        'PORT': '5432'
     }
 }
 
@@ -118,3 +122,6 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.10/howto/static-files/
 
 STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+STATIC_URL = '/static/'
+STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
