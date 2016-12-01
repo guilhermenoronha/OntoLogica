@@ -140,4 +140,13 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 STATIC_URL = '/static/'
 STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
 
+# ALLAUTH CONFIGURATION
 SITE_ID = 2
+ACCOUNT_AUTHENTICATION_METHOD = 'email'
+ACCOUNT_EMAIL_REQUIRED = True
+ACCOUNT_USERNAME_REQUIRED = False
+SOCIALACCOUNT_AUTO_SIGNUP = True
+SOCIALACCOUNT_ADAPTER = 'OntoLogica.adapter.MySocialAccountAdapter'
+
+# EMAIL CONFIGURATION
+EMAIL_BACKEND='django.core.mail.backends.console.EmailBackend'
