@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'allauth.socialaccount',
     'allauth.socialaccount.providers.facebook',
     'allauth.socialaccount.providers.google',
+    'CustomUser.apps.CustomuserConfig',
 ]
 
 MIDDLEWARE = [
@@ -147,6 +148,8 @@ ACCOUNT_EMAIL_REQUIRED = True
 ACCOUNT_USERNAME_REQUIRED = False
 SOCIALACCOUNT_AUTO_SIGNUP = True
 SOCIALACCOUNT_ADAPTER = 'OntoLogica.adapter.MySocialAccountAdapter'
+
+AUTH_USER_MODEL = 'CustomUser.CustomUser'
 
 # EMAIL CONFIGURATION
 EMAIL_BACKEND='django.core.mail.backends.console.EmailBackend'
