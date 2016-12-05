@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'allauth.socialaccount.providers.facebook',
     'allauth.socialaccount.providers.google',
     'CustomUser.apps.CustomuserConfig',
+    'Ontology.apps.OntologyConfig',
 ]
 
 MIDDLEWARE = [
