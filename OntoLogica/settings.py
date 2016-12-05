@@ -90,7 +90,7 @@ WSGI_APPLICATION = 'OntoLogica.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
+        'ENGINE': 'django.db.backends.psycopg2',
         'NAME': 'd1scl3ao37o6gs',
         'HOST': 'ec2-54-163-230-103.compute-1.amazonaws.com',
         'USER': 'pzgvrxqxqxkkux',
