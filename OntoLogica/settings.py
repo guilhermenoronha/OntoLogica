@@ -25,7 +25,7 @@ SECRET_KEY = '+1#orv0%@n=9&*k1ve)k*&p!qiy3gyr=5b306u-ww7&j&og(^0'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['127.0.0.1', 'ontologica.herokuapp.com']
+ALLOWED_HOSTS = ['ontologica.herokuapp.com']
 
 
 # Application definition
