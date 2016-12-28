@@ -2,6 +2,7 @@ from django.shortcuts import render
 from django.http import HttpResponseRedirect
 from .forms import UploadOntologyForm
 from django.views.generic import CreateView
+from .models import Ontology
 
 def index(request):
     if request.method == 'POST':
@@ -15,5 +16,7 @@ def index(request):
     else:
           form = UploadOntologyForm()
     
-    return render(request, 'index.html', {'form': form})
+    ontologies = Ontology.objects.filter(user=request.user.id)
+    print ontologies
+    return render(request, 'index.html', {'form': form, 'ontologies': ontologies})
         
